@@ -1,0 +1,54 @@
+body {
+    background-color: #1f1f1f; /* Очень тёмный серый, почти чёрный. Чистый #000000 лучше не использовать, так как он слишком резко контрастирует с текстом */
+    color: #e0e0e0; /* Светло-серый цвет текста для комфортного чтения */
+    margin: 1; /* Убираем стандартные отступы браузера по краям */
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Заставляет фон тянуться на всю высоту экрана, если контента мало */
+}
+table {
+    border-collapse: collapse;
+    margin-left: 20px;
+}
+table td:nth-child(2),
+table td:nth-child(3) {
+    text-align: center;
+}
+.pirojki th, 
+.pirojki td{
+    border: 2px solid rgb(0, 4, 255);
+    padding: 14px;
+    background-color: rgba(197, 197, 197, 0.153);
+}
+.prog-lang th, 
+.prog-lang td{
+    border: 2px solid rgb(255, 14, 14);
+    padding: 14px;
+    background-color: rgba(197, 197, 197, 0.153);
+}
+.imya {
+    background-color: rgb(255, 156, 156);
+}
+.xz {
+    background-color: rgb(156, 255, 197);
+}
+.sovok {
+    background-color: rgb(156, 158, 255);
+}
+.par {
+    padding: 10px;
+    width: 300px;
+    color: black;
+}
+.parm {
+    padding: 5px;
+    width: 100px;
+    color: rgb(202, 184, 20);
+}
+.pad {
+    padding: 12px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif
+}
+.flip_vert{
+    transform: scaleY(-1);
+}
