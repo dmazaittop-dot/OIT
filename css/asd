@@ -1,0 +1,88 @@
+/* Обертка, которая задает форму и фон всей плашки */
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #f4f6f8; 
+    border: 2px solid #e1e5e9; 
+    border-radius: 12px; 
+    padding: 4px;
+    width: 100%;
+    max-width: 500px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Состояние при фокусе на поле ввода */
+.search-wrapper:focus-within {
+    border-color: #6366f1; /* Меняем цвет рамки на синий (можно заменить на #ff6b6b для красного) */
+    background-color: #ffffff; /* Делаем фон внутри белым */
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15); /* Усиливаем тень */
+}
+
+/* Поле ввода */
+.search-input {
+    flex-grow: 1; 
+    border: none; 
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    padding: 12px 16px;
+    font-family: inherit;
+    color: #333;
+}
+
+.search-input::placeholder {
+    color: #9ca3af; /* Делаем цвет подсказки серым */
+    opacity: 1; /* Фикс для некоторых браузеров */
+}
+
+/* Кнопка */
+.search-btn {
+    background: #6366f1;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px; 
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-left: 4px;
+}
+
+/* Эффекты наведения и нажатия на кнопку */
+.search-btn:hover {
+    background: #4f46e5; /* Чуть более темный синий */
+}
+
+.search-btn:active {
+    transform: scale(0.98); /* Эффект нажатия (слегка уменьшается) */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 480px) {
+    .search-wrapper {
+        flex-direction: column; /* Ставим поле над кнопкой */
+        padding: 8px;
+    }
+    .search-btn {
+        width: 100%; /* Кнопка на всю ширину */
+        margin-left: 0;
+        margin-top: 8px;
+    }
+    .search-input {
+        text-align: center; /* Текст по центру на узких экранах */
+    }
+}
+
+/* Стили для блока вывода текста */
+.output-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #1f2937;
+    font-weight: 500;
+    padding: 12px;
+    background: #f0f9ff;
+    border-left: 4px solid #3b82f6;
+    border-radius: 6px;
+}
