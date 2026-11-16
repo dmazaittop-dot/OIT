@@ -34,26 +34,40 @@ table td:nth-child(3) {
 .sovok {
     background-color: rgb(156, 158, 255);
 }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+}
+
 .par {
     padding: 10px;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     color: black;
 }
+
 .par-butt {
     padding: 10px;
-    width: 160px;
+    width: 100%;
+    max-width: 160px;
     color: rgb(0, 0, 0);
 }
+
 .parm {
     padding: 5px;
-    width: 100px;
     color: rgb(202, 184, 20);
 }
+
 .pad {
     padding: 12px;
-    font-size: 25px;
-    font-family: 'Times New Roman', Times, serif
+    font-size: clamp(18px, 5vw, 25px);
+    font-family: 'Times New Roman', Times, serif;
 }
-.flip_vert{
+
+.flip_vert {
     transform: scaleY(-1);
 }
